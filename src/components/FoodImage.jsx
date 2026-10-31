@@ -1,5 +1,4 @@
 import { useState } from 'react';
-// Shows the photo; falls back to an emoji tile if the image fails to load.
 export default function FoodImage({ product, className = '' }) {
   const [bad, setBad] = useState(false);
   if (bad) return <div className={`food-fallback ${className}`} role="img" aria-label={product.name}>{product.emoji}</div>;
