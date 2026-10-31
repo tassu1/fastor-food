@@ -1,6 +1,5 @@
 const BASE =
-  import.meta.env.VITE_API_BASE_URL ||
-  (import.meta.env.DEV ? "/api" : "https://staging.fastor.ai");
+  import.meta.env.VITE_API_BASE_URL;
 
 export async function request(path, { method = "GET", form, token } = {}) {
   const headers = {};
